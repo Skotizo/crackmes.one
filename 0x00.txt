@@ -1,0 +1,4 @@
+C:\Users\cyba3\Desktop\malware\crackMe>crackme0x00.exe
+IOLI Crackme Level 0x00
+Password: 250382
+Password OK :)

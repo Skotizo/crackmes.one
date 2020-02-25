@@ -1,0 +1,50 @@
+int __cdecl _main(int _Argc,char **_Argv,char **_Env)
+
+{
+  size_t local_a0;
+  char local_7c [120];
+  
+  __alloca(local_a0);
+  ___main();
+  _printf("IOLI Crackme Level 0x04\n");
+  _printf("Password: ");
+  _scanf("%s",local_7c);
+  _check(local_7c);
+  return 0;
+}
+
+void __cdecl _check(char *param_1)
+
+{
+  size_t sVar1;
+  char local_11;
+  uint local_10;
+  int local_c;
+  int local_8;
+  
+  local_c = 0;
+  local_10 = 0;
+  while( true ) {
+    sVar1 = _strlen(param_1);
+    if (sVar1 <= local_10) {
+      _printf("Password Incorrect!\n");
+      return;
+    }
+    local_11 = param_1[local_10];
+    _sscanf(&local_11,"%d",&local_8);
+    local_c = local_c + local_8;
+    if (local_c == 0xf) break;
+    local_10 = local_10 + 1;
+  }
+  _printf("Password OK!\n");
+                    /* WARNING: Subroutine does not return */
+  _exit(0);
+}
+
+local_10 == 4
+any pass with strlen > 4 passes
+
+C:\Users\cyba3\Desktop\malware\crackMe>crackme0x04.exe
+IOLI Crackme Level 0x04
+Password: 12345
+Password OK!

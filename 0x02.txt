@@ -1,0 +1,28 @@
+int __cdecl _main(int _Argc,char **_Argv,char **_Env)
+
+{
+  size_t local_20;
+  int local_8;
+  
+  __alloca(local_20);
+  ___main();
+  _printf("IOLI Crackme Level 0x02\n");
+  _printf("Password: ");
+  _scanf("%d",&local_8);
+  if (local_8 == 0x52b24) {
+    _printf("Password OK :)\n");
+  }
+  else {
+    _printf("Invalid Password!\n");
+  }
+  return 0;
+}
+
+0x52b24 = 338724
+
+
+
+C:\Users\cyba3\Desktop\malware\crackMe>crackme0x02.exe
+IOLI Crackme Level 0x02
+Password: 338724
+Password OK :)
